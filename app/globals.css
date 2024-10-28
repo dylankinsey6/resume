@@ -1,21 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Smooch&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    --font-sans: 'Montserrat';
+    --font-cursive: 'Smooch';
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+  .body {
+    @apply font-sans text-base font-normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.h1 {
+    @apply font-sans text-4xl font-bold;
+}
+
+.h2 {
+    @apply font-sans text-3xl font-bold;
+}
+
+.h3 {
+    @apply font-sans text-2xl font-bold;
+}
+
+.h4 {
+    @apply font-sans text-xl font-bold;
+}
+
+.h5 {
+    @apply font-sans text-base font-semibold;
+}
+
+.h6 {
+    @apply font-sans text-sm font-semibold;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply body;
 }
+
+h1 {
+    @apply h1;
+}
+
+h2 {
+    @apply h2;
+}
+
+h3 {
+    @apply h3;
+}
+
+h4 {
+    @apply h4;
+}
+
+h5 {
+    @apply h5;
+}
+
+h6 {
+    @apply h6;
+}
+
+p {
+    @apply mb-2.5;
+}
+
+}
+
+@layer components {}
